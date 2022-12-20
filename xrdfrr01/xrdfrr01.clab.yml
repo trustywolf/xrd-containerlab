@@ -1,0 +1,17 @@
+name: srlfrr01
+
+topology:
+  nodes:
+    xrd:
+      kind: xrd
+      image: ghcr.io/trustywolf/xrd-control-plane:7.8.1
+      startup-config: xrd.cfg
+      env:
+        CLAB_MGMT_VRF: MGMT
+    frr:
+      kind: linux
+      image: frrouting/frr:v8.4.1
+      binds:
+        - daemons:/etc/frr/daemons
+  links:
+    - endpoints: ["xrd:eth1", "frr:eth1"]
