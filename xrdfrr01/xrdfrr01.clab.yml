@@ -14,4 +14,4 @@ topology:
       binds:
         - daemons:/etc/frr/daemons
   links:
-    - endpoints: ["xrd:eth1", "frr:eth1"]
+    - endpoints: ["xrd:Gi0-0-0-0", "frr:eth1"]

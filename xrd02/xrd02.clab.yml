@@ -14,4 +14,4 @@ topology:
       kind: xrd
       startup-config: xrd2.cfg
   links:
-    - endpoints: ["xrd1:eth1", "xrd2:eth1"]
+    - endpoints: ["xrd1:Gi0-0-0-0", "xrd2:Gi0-0-0-0"]
